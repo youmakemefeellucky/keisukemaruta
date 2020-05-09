@@ -1,0 +1,199 @@
+@font-face {
+    font-family: 'Shiseido Neue';
+    src: url('ShiseidoNeue-Regular.eot');
+    src: url('ShiseidoNeue-Regular.eot?#iefix') format('embedded-opentype'),
+        url('ShiseidoNeue-Regular.woff2') format('woff2'),
+        url('ShiseidoNeue-Regular.woff') format('woff'),
+        url('ShiseidoNeue-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  font-family: 'Shiseido Neue';
+  font-weight: normal;
+  font-style: normal;
+  overflow: hidden;
+}
+
+h2 {
+  margin-bottom: 60px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#home {
+  position: fixed;
+  z-index: 1;
+  color: inherit;
+  text-decoration: none;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  padding: 10px;
+  cursor: nesw-resize;
+}
+
+.mainphotobox {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  margin: 0;
+  overflow: hidden;
+}
+
+.helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.mainphoto {
+  max-height: 400px;
+  max-width: 400px;
+  vertical-align: middle;
+}
+
+.fade {
+  display: none;
+}
+
+.current {
+  display: block;
+}
+
+.menubutton {
+  font-size: 18px;
+  position: fixed;
+  z-index: 1;
+  transform: rotate(90deg);
+  right: 10px;
+  cursor: nesw-resize;
+  padding: 10px;
+}
+.contact {
+  position: fixed;
+  z-index: 1;
+  right: 20px;
+  padding: 10px;
+  cursor: nesw-resize;
+}
+
+#works {
+  top: 41vh;
+}
+
+#workscircle {
+  top: 41vh;
+  position: fixed;
+  z-index: 0;
+  right: 30px;
+  display: none;
+}
+
+#aboutcircle {
+  top: 54vh;
+  position: fixed;
+  z-index: 0;
+  right: 30px;
+  display: none;
+}
+
+#about {
+  bottom: 41vh;
+}
+
+#workspage {
+  display: none;
+}
+
+#workslist {
+  position: absolute;
+  float: left;
+  left: 30px;
+  top: 20vh;
+  width: 15%;
+  height: 100vh;
+  overflow: auto;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+#work {
+  position: relative;
+  float: right;
+  overflow-y: auto;
+  overflow-x: hidden;
+  top: 0;
+  bottom: 0;
+  margin-top: -8px;
+  padding-bottom: 16px;
+  margin-right: 20vw;
+  width: 50vw;
+  height: 100vh;
+}
+
+#work img {
+  width: 50vw;
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 60px;
+  padding: 0;
+  margin-bottom: 500px;
+}
+
+li {
+  margin-bottom: 50px;
+}
+
+#aboutpage {
+  padding-left: 30vw;
+  padding-top: 20vh;
+  display: none;
+  line-height: 1.8;
+  overflow: auto;
+  width: 50%;
+  height: 100vh;
+}
+
+.articlename {
+  cursor: nesw-resize;
+}
+
+.workarticle {
+  display: none;
+}
+
+#circle, #circle2{
+  display: none;
+}
+
+#work img {
+  margin-bottom: 100px;
+}
+
+#work p {
+  margin-bottom: 100px;
+}
+
+.worktext {
+  width: 40vw;
+  padding-left: 20%;
+}
