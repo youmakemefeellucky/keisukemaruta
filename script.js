@@ -22,12 +22,18 @@ $(document).ready(function(){
 
 
 ///////////////////////////////////////// NEED TO WORK MOREEEEEE /////////
-      $( ".articlename" ).click(function() {
+  /* $( ".articlename" ).click(function() {
         var a = $(event.target).offset().top;
         var b = $(event.target).offset().left;
         var c = a - 150;
 
         $( "#circle2" ).css({left:b,top:c,position:"absolute"});
+        $( "#circle2" ).show();
+      });  */
+
+      $( ".articlename" ).click(function() {
+        $( "#circle2" ).prependTo(event.target);
+        $( "#circle2" ).css({left:"30px",marginTop:"-10px"});
         $( "#circle2" ).show();
       });
 ///////////////////////////////////////// NEED TO WORK MOREEEEEE /////////
