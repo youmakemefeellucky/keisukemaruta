@@ -44,6 +44,20 @@ a {
   color: inherit;
 }
 
+#circle2{
+  display: none;
+  z-index: -1;
+  position: absolute;
+}
+
+.circle{
+  z-index: -1;
+  position: absolute;
+  top: 4px;
+  left: 20px;
+}
+
+
 #home {
   position: fixed;
   z-index: 1;
@@ -53,7 +67,6 @@ a {
   left: 20px;
   font-size: 24px;
   padding: 10px;
-  cursor: nesw-resize;
 }
 
 .mainphotobox {
@@ -91,7 +104,6 @@ a {
   z-index: 1;
   transform: rotate(90deg);
   right: 10px;
-  cursor: nesw-resize;
   padding: 10px;
 }
 .contact {
@@ -99,35 +111,14 @@ a {
   z-index: 1;
   right: 20px;
   padding: 10px;
-  cursor: nesw-resize;
 }
 
 #works {
   top: 41vh;
 }
 
-#workscircle {
-  top: 41vh;
-  position: fixed;
-  z-index: 0;
-  right: 30px;
-  display: none;
-}
-
-#aboutcircle {
-  top: 54vh;
-  position: fixed;
-  z-index: 0;
-  right: 30px;
-  display: none;
-}
-
 #about {
   bottom: 41vh;
-}
-
-#workspage {
-  display: none;
 }
 
 #workslist {
@@ -160,6 +151,11 @@ a {
 
 #work img {
   width: 50vw;
+  margin-bottom: 100px;
+}
+
+#work p {
+  margin-bottom: 100px;
 }
 
 ul {
@@ -170,42 +166,30 @@ ul {
 }
 
 li {
-  margin-bottom: 50px;
-}
-
-#aboutpage {
-  padding-left: 30vw;
-  padding-top: 20vh;
-  display: none;
-  line-height: 1.8;
-  overflow: auto;
-  width: 50%;
-  height: 100vh;
+  margin-bottom: 30px;
 }
 
 .articlename {
-  cursor: nesw-resize;
+  cursor: pointer;
 }
 
 .workarticle {
   display: none;
 }
 
-#circle, #circle2{
-  display: none;
-  z-index: -1;
-  position: absolute;
-}
-
-#work img {
-  margin-bottom: 100px;
-}
-
-#work p {
-  margin-bottom: 100px;
-}
-
 .worktext {
   width: 40vw;
   padding-left: 20%;
+}
+
+#aboutpage {
+  padding-left: 30vw;
+  padding-top: 20vh;
+  /*
+  display: none;
+  */
+  line-height: 1.8;
+  overflow: auto;
+  width: 50%;
+  height: 100vh;
 }

@@ -2,6 +2,7 @@ $(document).ready(function(){
 
 // menu function
 
+/*
     // show clicked menu only
     $( ".button" ).click(function() {
       var $buttons = $( "#" + event.target.id + "page");
@@ -10,8 +11,11 @@ $(document).ready(function(){
       $( "#workslist, #work" ).scrollTop(0);
       return false;
       });
+*/
 
       // show circle on clicked element
+
+      /*
       $( ".menubutton" ).click(function() {
         var x = $(event.target).position().top;
         var y = $(event.target).position().left;
@@ -19,6 +23,8 @@ $(document).ready(function(){
         $( "#circle" ).css({left:y,top:z,position:"absolute"});
         $( "#circle" ).show();
       });
+      */
+
 
 
 ///////////////////////////////////////// NEED TO WORK MOREEEEEE /////////
@@ -38,7 +44,7 @@ $(document).ready(function(){
       });
 ///////////////////////////////////////// NEED TO WORK MOREEEEEE /////////
 
-
+/*
       // circle reset
       $( "#home" ).click(function() {
         $( "#circle, #circle2" ).hide();
@@ -46,6 +52,8 @@ $(document).ready(function(){
       $( "#about" ).click(function() {
         $( "#circle2" ).hide();
       });
+
+*/
 
 // fade function
   var divs = $('.fade');
@@ -79,9 +87,11 @@ $(document).ready(function(){
       $article.siblings( ".workarticle" ).hide();
     });
 
+/*
     // workarticle reset
     $( "#home, #about" ).click(function() {
       $( ".workarticle" ).hide();
     });
+*/
 
 });
