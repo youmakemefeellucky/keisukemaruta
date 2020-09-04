@@ -14,9 +14,9 @@
   <body>
 
     <!--Menu start-->
-        <a id="home" class="butn" href="index.html">Keisuke Maruta</a>
-        <a id="works" class="button menubutton" href="works.html"><img src="circle.svg" class="circle">Works</a>
-        <a id="about" class="button menubutton" href="about.html">About</a>
+        <a id="homebutton" class="butn" href="index.html">Keisuke Maruta</a>
+        <a id="worksbutton" class="button menubutton" href="works.html"><img src="circle.svg" class="circle">Works</a>
+        <a id="aboutbutton" class="button menubutton" href="about.html">About</a>
 
         <a class="contact" style="top:70vh;" href="https://www.instagram.com/kaymaruta/" target="_blank"><img src="insta.svg"></a>
         <a class="contact" style="top:78vh;" href="mailto:kxo.225@gmail.com" target="_blank"><img src="mail.svg"></a>
@@ -24,33 +24,58 @@
 
 
     <!--Workspage start-->
-    <div class="page">
 
     <!--Works left list start-->
     <div id="workslist">
-      <img src="circle.svg" id="circle2">
 
       <h3 style="color:#797979">Projets artistiques</h3>
       <ul>
-          <li id="nabe" class="articlename">L’art de Monsieur Nabéshima</li>
-          <li id="ques" class="articlename">???? ?????</li>
-          <li id="vaca" class="articlename">Une semaine de vacance</li>
-          <li id="empr" class="articlename">Les empreintes</li>
-          <li id="eter" class="articlename">Eternity (Why do other people believe in me more than I believe in myself?)</li>
-          <li id="vais" class="articlename">Ma recette de vaisselle/Qu’est-ce qu’il y a pour le dîner?</li>
-          <li id="happ" class="articlename">Happy together</li>
-          <li id="ends" class="articlename">End&Start</li>
-          <li id="serv" class="articlename">Servez-vous</li>
-          <li id="last" >The last bastion of first key. (Coming soon)</li>
+          <a href="works/nabeshima.html"><li>L’art de Monsieur Nabéshima</li></a>
+          <a href="works/questionmarks.html"><li>???? ?????</li></a>
+          <li>Une semaine de vacance</li>
+          <li>Les empreintes</li>
+          <li>Eternity (Why do other people believe in me more than I believe in myself?)</li>
+          <li>Ma recette de vaisselle/Qu’est-ce qu’il y a pour le dîner?</li>
+          <li>Happy together</li>
+          <li>End&Start</li>
+          <li>Servez-vous</li>
+          <li>The last bastion of first key. (Coming soon)</li>
       </ul>
 
     </div>
     <!--Works left list start-->
 
+
+
     <!--Work start-->
     <div id="work">
+
+
+      <!-- L'art de Monsieur Nabéshima -->
       <div id="nabepage" class="workarticle">
-        <img src="img/nabeshima.jpg">
+
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 1</div>
+                <img src="img/nabeshima.jpg">
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+        </div>
+
+
         <div class="worktext">
             <h2>L'art de Monsieur Nabéshima</h2>
             <p>Monsieur Nabéshima était mon camarade de classe.<br>
@@ -71,8 +96,55 @@
             </p></div>
       </div>
 
+
+      <!-- ???? ????? -->
       <div id="quespage" class="workarticle">
-        <img src="img/question1.JPG">
+
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 5</div>
+                <img src="img/question1.JPG">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 5</div>
+                <img src="img/question2.JPG">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 5</div>
+                <img src="img/question3.JPG">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 5</div>
+                <img src="img/question4.JPG">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 5</div>
+                <img src="img/question5.JPG">
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+
         <div class="worktext">
             <h2>???? ?????</h2>
             <p>
@@ -85,7 +157,7 @@
               <a href="https://www.jeunecreation.org/working-title/" target="_blank">https://www.jeunecreation.org/working-title/</a>
             </p>
           </div>
-          <img src="img/question2.jpg"><img src="img/question3.JPG"><img src="img/question4.JPG"><img src="img/question5.JPG"><img src="img/question6.jpg"><img src="img/question7.jpg"><img src="img/question8.jpg"><img src="img/question9.jpg"><img src="img/question10.JPG"><img src="img/question11.JPG"><img src="img/question12.JPG"><img src="img/question13.JPG"><img src="img/question14.JPG">
+
       </div>
 
       <div id="vacapage" class="workarticle">
@@ -161,6 +233,8 @@
 
 
     </div>
+
+
     <!--Work end-->
 
   </div>

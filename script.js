@@ -1,61 +1,9 @@
 $(document).ready(function(){
 
-// menu function
-
-/*
-    // show clicked menu only
-    $( ".button" ).click(function() {
-      var $buttons = $( "#" + event.target.id + "page");
-      $buttons.siblings( ".page" ).fadeOut("slow","swing");
-      $buttons.fadeIn("slow","swing");
-      $( "#workslist, #work" ).scrollTop(0);
-      return false;
-      });
-*/
-
-      // show circle on clicked element
-
-      /*
-      $( ".menubutton" ).click(function() {
-        var x = $(event.target).position().top;
-        var y = $(event.target).position().left;
-        var z = x + 20;
-        $( "#circle" ).css({left:y,top:z,position:"absolute"});
-        $( "#circle" ).show();
-      });
-      */
 
 
 
-///////////////////////////////////////// NEED TO WORK MOREEEEEE /////////
-  /* $( ".articlename" ).click(function() {
-        var a = $(event.target).offset().top;
-        var b = $(event.target).offset().left;
-        var c = a - 150;
-
-        $( "#circle2" ).css({left:b,top:c,position:"absolute"});
-        $( "#circle2" ).show();
-      });  */
-
-      $( ".articlename" ).click(function() {
-        $( "#circle2" ).prependTo(event.target);
-        $( "#circle2" ).css({left:"30px",marginTop:"-10px"});
-        $( "#circle2" ).show();
-      });
-///////////////////////////////////////// NEED TO WORK MOREEEEEE /////////
-
-/*
-      // circle reset
-      $( "#home" ).click(function() {
-        $( "#circle, #circle2" ).hide();
-      });
-      $( "#about" ).click(function() {
-        $( "#circle2" ).hide();
-      });
-
-*/
-
-// fade function
+// intro fade function
   var divs = $('.fade');
   function fade() {
       var current = $('.current');
@@ -74,24 +22,42 @@ $(document).ready(function(){
       });
       }
       fade();
+// intro fade ends
 
 
-// workpage function
 
-    // show clicked article only
-    $( ".articlename" ).click(function() {
-      $( "#work" ).animate({
-          scrollTop: $("html").offset().top
-      }, 0);
-      var $article = $( "#" + event.target.id + "page").show();
-      $article.siblings( ".workarticle" ).hide();
-    });
 
-/*
-    // workarticle reset
-    $( "#home, #about" ).click(function() {
-      $( ".workarticle" ).hide();
-    });
-*/
+// Slideshow
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+// Slideshow ends
 
 });
