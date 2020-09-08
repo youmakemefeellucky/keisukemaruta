@@ -173,8 +173,8 @@ li img {
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
-  width: 1000px;
+  max-width: 70vw;
+  width: 70vw;
   position: relative;
   margin: auto;
   height: 92vh;
