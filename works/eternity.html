@@ -6,7 +6,34 @@
     <meta name="Description" content="Portfolio - Projets artistiques">
     <link rel="stylesheet" type="text/css" href="../style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="../script.js"></script>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        }
+  </script>
     <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
     <title>Works</title>
   </head>
@@ -54,17 +81,17 @@
         <div class="slideshow-container">
 
             <!-- Full-width images with number and caption text -->
-            <div class="mySlides fadeslide">
+            <div class="mySlides fadeslide" style="display:block">
                 <div class="numbertext">1 / 3</div>
                 <img src="../img/eternity1.jpg">
             </div>
 
-            <div class="mySlides fadeslide">
+            <div class="mySlides fadeslide" style="display:none">
                 <div class="numbertext">2 / 3</div>
                 <img src="../img/eternity2.jpg">
             </div>
 
-            <div class="mySlides fadeslide">
+            <div class="mySlides fadeslide" style="display:none">
                 <div class="numbertext">3 / 3</div>
                 <img src="../img/eternity3.jpg">
             </div>
@@ -78,7 +105,7 @@
 
         <!-- The dots/circles -->
         <div style="text-align:center">
-          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot active" onclick="currentSlide(1)"></span>
           <span class="dot" onclick="currentSlide(2)"></span>
           <span class="dot" onclick="currentSlide(3)"></span>
         </div>
