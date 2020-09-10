@@ -24,11 +24,13 @@ $(document).ready(function(){
 
 
 
-// Slideshow Button start
+// Bugerbutton start
 
- 
+document.getElementById("burgerbutton").onclick = function change()
+    { document.getElementById("burgerbutton").classList.toggle("change"); }
 
-// Slideshow Button end
+
+// Bugerbutton end
 
 
 

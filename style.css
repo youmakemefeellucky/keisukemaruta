@@ -15,6 +15,8 @@
 
 html {
   height: 100vh;
+  margin: 0;
+  overflow: hidden;
 }
 
 body {
@@ -22,6 +24,7 @@ body {
   font-weight: normal;
   font-style: normal;
   overflow: hidden;
+  margin: 0;
 }
 
 h2 {
@@ -41,6 +44,10 @@ h5 {
   font-size: 14px;
   margin-top: 40px;
   margin-bottom: 18px;
+}
+
+p {
+  margin: 0;
 }
 
 a {
@@ -67,6 +74,47 @@ a {
   padding: 10px;
 }
 
+/* burger button start */
+
+#burgerbutton {
+  position: fixed;
+  z-index: 3;
+  top: 30px;
+  right: 30px;
+  display: inline-block;
+  cursor: pointer;
+  transform: rotate(90deg);
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+  #burgerbutton {
+    display: none;
+  }
+}
+
+.bar1, .bar2, .bar3 {
+  width: 32px;
+  height: 2px;
+  background-color: #333;
+  margin: 10px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 8px);
+  transform: rotate(-45deg) translate(-9px, 8px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-9px, -8px);
+  transform: rotate(45deg) translate(-9px, -8px);
+}
+
+/* burger button end */
+
 .mainphotobox {
   position: absolute;
   width: 100vw;
@@ -83,9 +131,17 @@ a {
 }
 
 .mainphoto {
-  max-height: 600px;
-  max-width: 600px;
   vertical-align: middle;
+  max-height: 90vw;
+  max-width: 90vw;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .mainphoto {
+    max-height: 600px;
+    max-width: 600px;
+  }
 }
 
 .fade {
@@ -96,30 +152,56 @@ a {
   display: block;
 }
 
+#menu {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  margin: 0;
+  right: 0;
+  height: 100vh;
+  width: 76px;
+  padding: 16px;
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+  #menu {
+    display: block;
+  }
+}
+
+#buttons {
+  position: relative;
+  margin-top: 30vh;
+  right: 12px;
+}
+
 .menubutton {
   font-size: 18px;
-  position: fixed;
-  z-index: 1;
+  padding: 10px;
   transform: rotate(90deg);
-  right: 10px;
-  padding: 10px;
+  margin-bottom: 60px;
 }
+
+#icons {
+  position: relative;
+  margin-top: 100px;
+  right: 8px;
+}
+
 .contact {
-  position: fixed;
-  z-index: 1;
-  right: 20px;
-  padding: 10px;
+  bottom: 20px;
+  display: inline;
 }
 
-#worksbutton {
-  top: 41vh;
-}
-
-#aboutbutton {
-  bottom: 41vh;
+.icon {
+  width: 32px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 #workslist {
+  display: none;
   position: absolute;
   float: left;
   left: 30px;
@@ -127,6 +209,14 @@ a {
   width: 200px;
   height: 100vh;
   overflow: auto;
+  z-index: 2;
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+  #workslist {
+    display: block;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -137,13 +227,21 @@ a {
   z-index: -1;
   overflow-y: auto;
   overflow-x: hidden;
-  top: 0;
-  bottom: 0;
-  width: 100vw;
-  padding-left: 20vw;
-  padding-right: 10vw;
+  width: 90vw;
   height: 100vh;
-  padding-bottom: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 40px;
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+  .workspage {
+    width: 80vw;
+    margin-left: 20vw;
+    padding-right: 8vw;
+    padding-bottom: 100px;
+  }
 }
 
 ul {
@@ -165,24 +263,56 @@ li img {
 }
 
 .worktext {
-  padding-top: 100px;
-  width: 60vw;
-  padding-left: 10vw;
+  padding-top: 50px;
+  width: 90vw;
   line-height: 1.4;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .worktext {
+    padding-top: 100px;
+    padding-left: 6vw;
+    width: 70vw;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+  .worktext {
+    padding-left: 10vw;
+  }
 }
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 70vw;
-  width: 70vw;
+  width: 100%;
   position: relative;
   margin: auto;
-  height: 92vh;
+  height: 70vh;
+  margin-top: 10vh;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .slideshow-container {
+    width: 100%;
+    position: relative;
+    height: 92vh;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .slideshow-container {
+    margin-top: 6vh;
+  }
 }
 
 /* Hide the images by default */
 .mySlides {
   height: 100%;
+  width: 100%;
   position: relative;
 }
 
@@ -229,7 +359,7 @@ li img {
 
 /* Number text (1/3 etc) */
 .numbertext {
-  color: #797979;
+  color: #000000;
   font-size: 12px;
   padding: 8px 12px;
   position: absolute;
@@ -253,6 +383,26 @@ li img {
   background-color: #000000;
 }
 
+.flex-container {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  font-size: 22px;
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .flex-container {
+    display: none;
+  }
+}
+
+.flex-element {
+  margin: 8px;
+  text-align: center;
+}
+
 /* Fading animation */
 .fadeslide {
   -webkit-animation-name: fadeslide;
@@ -272,11 +422,25 @@ li img {
 }
 
 #aboutpage {
-  padding-left: 30vw;
+  padding-left: 6vw;
   padding-top: 25vh;
-  padding-right: 10vw;
+  padding-right: 6vw;
   padding-bottom: 5vh;
   line-height: 1.8;
   overflow: auto;
   height: 100vh;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  #aboutpage {
+    padding-left: 10vw;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  #aboutpage {
+    padding-left: 30vw;
+  }
 }
