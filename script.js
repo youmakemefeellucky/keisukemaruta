@@ -26,8 +26,21 @@ $(document).ready(function(){
 
 // Bugerbutton start
 
-document.getElementById("burgerbutton").onclick = function change()
-    { document.getElementById("burgerbutton").classList.toggle("change"); }
+document.getElementById("burgerbutton").onclick = function change() {
+
+      document.getElementById("burgerbutton").classList.toggle("change");
+
+      var x = document.getElementById("menu");
+      var y = document.getElementById("modal");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+        y.style.display = "block";
+      } else {
+        x.style.display = "none";
+        y.style.display = "none";
+      }
+
+    }
 
 
 // Bugerbutton end

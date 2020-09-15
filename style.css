@@ -56,7 +56,7 @@ a {
 }
 
 .circle {
-  z-index: -1;
+  z-index: 3;
   position: absolute;
   top: 4px;
   left: 20px;
@@ -78,9 +78,9 @@ a {
 
 #burgerbutton {
   position: fixed;
-  z-index: 3;
-  top: 30px;
-  right: 30px;
+  z-index: 4;
+  top: 20px;
+  right: 14px;
   display: inline-block;
   cursor: pointer;
   transform: rotate(90deg);
@@ -94,10 +94,10 @@ a {
 }
 
 .bar1, .bar2, .bar3 {
-  width: 32px;
+  width: 28px;
   height: 2px;
   background-color: #333;
-  margin: 10px 0;
+  margin: 10px;
   transition: 0.4s;
 }
 
@@ -155,25 +155,36 @@ a {
 #menu {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 3;
   margin: 0;
   right: 0;
   height: 100vh;
   width: 76px;
-  padding: 16px;
+  padding: 28px;
+  background-color: white;
 }
 
 /* Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {
   #menu {
-    display: block;
+    display: block !important;
+    background-color: transparent;
+    padding: 16px;
   }
 }
 
 #buttons {
+  z-index: 4;
   position: relative;
   margin-top: 30vh;
-  right: 12px;
+  right: 0px;
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+  #buttons {
+    right: 12px;
+  }
 }
 
 .menubutton {
@@ -198,6 +209,19 @@ a {
   width: 32px;
   margin-top: 16px;
   margin-bottom: 16px;
+}
+
+#modal {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.5);
 }
 
 #workslist {
@@ -385,6 +409,7 @@ li img {
 
 .flex-container {
   margin-top: 100px;
+  margin-bottom: 80px;
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
